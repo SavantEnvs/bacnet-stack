@@ -1,0 +1,9 @@
+project: savantenvs/bacnet-stack
+target: fuzz_mstp
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/fuzz_mstp/testsuite
+cmds:
+  - cmd: /mayhem/fuzz_mstp
+    libfuzzer: true
+    timeout: 5

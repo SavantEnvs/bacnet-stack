@@ -1,0 +1,1 @@
+`bvlc_address_from_ascii` (`src/bacnet/datalink/bvlc.c:2378`) keeps advancing past the NUL terminator when the string has fewer than four octets (e.g. `"0"`), reading past the end of the buffer. Input byte 0 selects the parser (0xe9 % 14 == 9), the rest is the text.

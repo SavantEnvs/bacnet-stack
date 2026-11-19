@@ -1,0 +1,9 @@
+project: savantenvs/bacnet-stack
+target: fuzz_bvlc_sc
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/fuzz_bvlc_sc/testsuite
+cmds:
+  - cmd: /mayhem/fuzz_bvlc_sc
+    libfuzzer: true
+    timeout: 5

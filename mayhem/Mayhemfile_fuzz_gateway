@@ -1,0 +1,9 @@
+project: savantenvs/bacnet-stack
+target: fuzz_gateway
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/fuzz_gateway/testsuite
+cmds:
+  - cmd: /mayhem/fuzz_gateway
+    libfuzzer: true
+    timeout: 5
